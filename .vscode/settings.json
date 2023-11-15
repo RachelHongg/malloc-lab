@@ -1,0 +1,11 @@
+{
+    "makefile.compileCommandsPath": "./compile_commands.json",
+    "makefile.launchConfigurations": [
+        {
+            "cwd": "/home/ubuntu/malloc-lab",
+            "MIMode": "gdb",
+            "binaryPath": "/home/ubuntu/malloc-lab/mdriver",
+            "binaryArgs": ["-f", "traces/short1-bal.rep"]
+        }
+    ]
+}

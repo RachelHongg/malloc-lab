@@ -18,7 +18,6 @@
 static char *mem_start_brk;  /* points to first byte of heap */
 static char *mem_brk;        /* points to last byte of heap */
 static char *mem_max_addr;   /* largest legal heap address */ 
-static char *mem_heap;
 
 /* 
  * mem_init - initialize the memory system model
@@ -30,8 +29,8 @@ void mem_init(void)
 	fprintf(stderr, "mem_init_vm: malloc error\n");
 	exit(1);
     }
-    mem_heap = malloc(MAX_HEAP);
-    mem_max_addr = (mem_start_brk + MAX_HEAP);  /* max legal heap address */
+
+    mem_max_addr = mem_start_brk + MAX_HEAP;  /* max legal heap address */
     mem_brk = mem_start_brk;                  /* heap is empty initially */
 }
 
